@@ -1,15 +1,20 @@
-﻿@{
-    ViewData["Title"] = "Cart";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome SSL Commerz </h1>    
-</div>
-
-<div class="row">
+﻿<div class="row">
     <div class="col-md-12">
         <p><span>Product Name:</span> HP Pavilion Series Laptop</p>
-        <p><span>Price :</span> 85,000 TK</p>
-        <a class="btn btn-primary" href="/cart/checkout"> <i class="fa fa-check"></i> Checkout</a> 
+        <p><span>Price :</span> <input type="text" id="priceInput" placeholder="Enter Price"> TK</p>
+        <a class="btn btn-primary" id="checkoutBtn" href="#"> <i class="fa fa-check"></i> Checkout</a> 
     </div>
 </div>
+
+<script>
+   
+    var priceInput = document.getElementById("priceInput");
+    var checkoutBtn = document.getElementById("checkoutBtn");
+
+   
+    priceInput.addEventListener("input", function() {
+        var price = priceInput.value;
+    
+        checkoutBtn.href = "/cart/checkout?price=" + price;
+    });
+</script>

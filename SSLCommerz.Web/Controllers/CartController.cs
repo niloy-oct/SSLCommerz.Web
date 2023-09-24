@@ -15,10 +15,10 @@ namespace SSLCommerz.Web.Controllers
             return View();
         }
 
-        public IActionResult Checkout()
+        public IActionResult Checkout(decimal price)
         {
             var productName = "HP Pavilion Series Laptop";
-            var price = 85000;
+            
 
             var baseUrl = Request.Scheme + "://" + Request.Host;
 
@@ -81,7 +81,7 @@ namespace SSLCommerz.Web.Controllers
 
             string TrxID = Request.Form["tran_id"];
             // AMOUNT and Currency FROM DB FOR THIS TRANSACTION
-            string amount = "85000";
+            string amount = Request.Form["amount"];
             string currency = "BDT";
 
             var storeId = "healt651006c15892c";
