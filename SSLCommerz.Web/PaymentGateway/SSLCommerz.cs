@@ -14,7 +14,7 @@ namespace SSLCommerz.Web.PaymentGateway
     /// <summary>
     /// SSLCommerz SDK
     /// Author: SSLWIRELESS LTD.
-    /// Developed By: Md. Shahnawaz Ahmed
+    /// Modified By: Mahedi Hasan Niloy
     /// </summary>
     public class SSLCommerzGatewayProcessor
     {
